@@ -150,6 +150,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    padding-top: 80px; /* Espaço para o header fixo */
 }
 
 /* Prevent horizontal overflow on all elements */
@@ -273,6 +274,7 @@ p {
     padding: var(--space-40) 0;
     text-align: center;
     position: relative;
+    margin-top: 0; /* Garantir que não haja margem extra */
 }
 
 .section-padding {
@@ -768,6 +770,7 @@ p {
     position: relative;
     overflow: hidden;
     padding: var(--space-20) 0;
+    margin-top: -80px; /* Compensar o padding-top do body */
 }
 
 #hero .container {
@@ -798,6 +801,11 @@ section .container {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+/* Ajuste para seções após o hero */
+section:not(#hero) {
+    padding-top: calc(var(--space-40) + 20px); /* Adicionar espaço extra para compensar o header */
 }
 
 /* Card Perfect Centering */
@@ -1189,6 +1197,24 @@ form, input, button {
     font-weight: 400;
 }
 
+/* Header Fixo - Estilos específicos */
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+header.fixed:hover {
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom-color: rgba(255, 215, 0, 0.4);
+}
+
 /* Enhanced Dark Theme Buttons - Gold Style */
 .btn-gold {
     background: var(--gold-gradient);
@@ -1211,6 +1237,7 @@ form, input, button {
     border-radius: 8px;
     padding: 12px 24px;
     min-width: 200px;
+    z-index: 1000; /* Garantir que fique acima do header */
 }
 
 .btn-gold::before {
