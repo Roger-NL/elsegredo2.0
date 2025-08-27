@@ -114,7 +114,7 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-                        <button onclick="goToCheckout('ebook')" class="px-10 py-5 bg-gradient-to-r from-gold-primary to-gold-dark text-black font-bold text-xl rounded-2xl hover:from-gold-dark hover:to-gold-primary transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        <button onclick="navigateBySection('hero')" class="px-10 py-5 bg-gradient-to-r from-gold-primary to-gold-dark text-black font-bold text-xl rounded-2xl hover:from-gold-dark hover:to-gold-primary transition-all duration-300 transform hover:scale-105 shadow-2xl">
                             🚀 QUERO DESCOBRIR O SEGREDO
                         </button>
                     </div>
@@ -865,7 +865,7 @@
             </div>
             
             <div class="text-center mt-20">
-                <button onclick="goToCheckout('final')" class="px-12 py-6 bg-gradient-to-r from-gold-primary to-gold-dark text-black font-bold text-2xl rounded-3xl hover:from-gold-dark hover:to-gold-primary transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                <button onclick="navigateBySection('guarantee')" class="px-12 py-6 bg-gradient-to-r from-gold-primary to-gold-dark text-black font-bold text-2xl rounded-3xl hover:from-gold-dark hover:to-gold-primary transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     🚀 QUERO COMEÇAR AGORA
                 </button>
             </div>
@@ -919,33 +919,33 @@
         </div>
     </section>
 
-    <!-- Seção WhatsApp Mobile-First -->
-    <section id="whatsapp-section" class="py-12 bg-green-600">
+    <!-- Seção de Contato -->
+    <section id="contato-section" class="py-12 bg-gradient-to-br from-dark-gray-800 to-dark-gray-900">
         <div class="container mx-auto px-4 text-center">
             <!-- Header -->
             <h2 class="text-2xl font-bold text-white mb-3">
-                💬 Fale Conosco no WhatsApp
+                💬 Tire Suas Dúvidas Conosco
             </h2>
-            <p class="text-green-100 mb-8 max-w-md mx-auto">
-                Tire suas dúvidas e receba orientação personalizada!
+            <p class="text-gray-300 mb-8 max-w-md mx-auto">
+                Fale diretamente conosco e receba orientação personalizada!
             </p>
             
-            <!-- WhatsApp Card -->
-            <div class="bg-white rounded-xl p-6 max-w-sm mx-auto shadow-lg">
-                <!-- WhatsApp Icon -->
-                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-3xl">📱</span>
+            <!-- Contact Card -->
+            <div class="bg-gradient-to-br from-dark-gray-700 to-dark-gray-800 border border-gold-primary/20 rounded-xl p-6 max-w-sm mx-auto shadow-lg">
+                <!-- Icon -->
+                <div class="w-16 h-16 bg-gradient-to-br from-gold-primary to-gold-dark rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <span class="text-3xl">💬</span>
                 </div>
                 
-                <h3 class="text-lg font-bold text-gray-800 mb-2">Atendimento Rápido</h3>
-                <p class="text-gray-600 text-sm mb-6">
-                    Nossa equipe responde em até 5 minutos!
+                <h3 class="text-lg font-bold text-white mb-2">Atendimento Especializado</h3>
+                <p class="text-gray-400 text-sm mb-6">
+                    Nossa equipe responde rapidamente suas dúvidas!
                 </p>
                 
                 <!-- WhatsApp Button -->
-                <button onclick="openWhatsAppDirect()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md mb-4">
+                <button onclick="openWhatsAppDirect()" class="w-full bg-gradient-to-r from-gold-primary to-gold-dark hover:from-gold-dark hover:to-gold-primary text-dark-black font-bold py-3 px-4 rounded-lg text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-lg mb-4 transform hover:scale-105">
                     <span class="text-xl">💬</span>
-                    ABRIR WHATSAPP
+                    FALAR NO WHATSAPP
                 </button>
                 
                 <!-- Trust indicators -->
@@ -958,19 +958,19 @@
             
             <!-- Quick Benefits -->
             <div class="grid grid-cols-3 gap-3 max-w-md mx-auto mt-8">
-                <div class="bg-white/10 rounded-lg p-3 text-white">
+                <div class="bg-gold-primary/10 border border-gold-primary/20 rounded-lg p-3 text-white">
                     <div class="text-xl mb-1">🎯</div>
-                    <p class="text-xs">Orientação<br>Personalizada</p>
+                    <p class="text-xs text-gold-primary font-semibold">Orientação<br>Personalizada</p>
                 </div>
                 
-                <div class="bg-white/10 rounded-lg p-3 text-white">
+                <div class="bg-gold-primary/10 border border-gold-primary/20 rounded-lg p-3 text-white">
                     <div class="text-xl mb-1">🎁</div>
-                    <p class="text-xs">Bônus<br>Exclusivos</p>
+                    <p class="text-xs text-gold-primary font-semibold">Bônus<br>Exclusivos</p>
                 </div>
                 
-                <div class="bg-white/10 rounded-lg p-3 text-white">
+                <div class="bg-gold-primary/10 border border-gold-primary/20 rounded-lg p-3 text-white">
                     <div class="text-xl mb-1">⏰</div>
-                    <p class="text-xs">8h às 22h<br>Todos os dias</p>
+                    <p class="text-xs text-gold-primary font-semibold">Horário<br>Estendido</p>
                 </div>
             </div>
         </div>

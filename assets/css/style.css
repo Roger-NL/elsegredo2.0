@@ -2382,55 +2382,55 @@ a:focus {
     }
 }
 
-/* WhatsApp Section Mobile Otimizada - NOVA VERSÃO */
+/* Seção de Contato Mobile Otimizada - NOVA VERSÃO */
 @media (max-width: 480px) {
-    #whatsapp-section {
+    #contato-section {
         padding: 32px 0 !important;
     }
     
-    #whatsapp-section .container {
+    #contato-section .container {
         padding: 0 16px !important;
     }
     
-    #whatsapp-section h2 {
+    #contato-section h2 {
         font-size: 1.5rem !important;
         margin-bottom: 8px !important;
     }
     
-    #whatsapp-section p {
+    #contato-section p {
         font-size: 0.9rem !important;
         margin-bottom: 24px !important;
     }
     
-    /* WhatsApp Card Mobile */
-    #whatsapp-section .bg-white {
+    /* Contact Card Mobile */
+    #contato-section .bg-gradient-to-br {
         max-width: 280px !important;
         padding: 20px 16px !important;
         border-radius: 12px !important;
     }
     
-    #whatsapp-section .w-16.h-16 {
+    #contato-section .w-16.h-16 {
         width: 56px !important;
         height: 56px !important;
         margin-bottom: 16px !important;
     }
     
-    #whatsapp-section .text-3xl {
+    #contato-section .text-3xl {
         font-size: 2rem !important;
     }
     
-    #whatsapp-section h3 {
+    #contato-section h3 {
         font-size: 1.1rem !important;
         margin-bottom: 8px !important;
     }
     
-    #whatsapp-section .text-sm {
+    #contato-section .text-sm {
         font-size: 0.85rem !important;
         margin-bottom: 20px !important;
     }
     
-    /* WhatsApp Button Mobile */
-    #whatsapp-section button {
+    /* Contact Button Mobile */
+    #contato-section button {
         width: 100% !important;
         padding: 16px 20px !important;
         font-size: 1rem !important;
@@ -2439,33 +2439,33 @@ a:focus {
         margin-bottom: 16px !important;
     }
     
-    #whatsapp-section .text-xl {
+    #contato-section .text-xl {
         font-size: 1.25rem !important;
     }
     
     /* Trust indicators */
-    #whatsapp-section .text-xs {
+    #contato-section .text-xs {
         font-size: 0.75rem !important;
     }
     
     /* Benefits grid mobile */
-    #whatsapp-section .grid.grid-cols-3 {
+    #contato-section .grid.grid-cols-3 {
         gap: 8px !important;
         margin-top: 24px !important;
         max-width: 240px !important;
     }
     
-    #whatsapp-section .bg-white\/10 {
+    #contato-section .bg-gold-primary\/10 {
         padding: 12px 8px !important;
         border-radius: 8px !important;
     }
     
-    #whatsapp-section .bg-white\/10 .text-xl {
+    #contato-section .bg-gold-primary\/10 .text-xl {
         font-size: 1.1rem !important;
         margin-bottom: 4px !important;
     }
     
-    #whatsapp-section .bg-white\/10 p {
+    #contato-section .bg-gold-primary\/10 p {
         font-size: 0.7rem !important;
         line-height: 1.2 !important;
         margin-bottom: 0 !important;

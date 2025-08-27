@@ -453,64 +453,105 @@ function playVideo() {
     }
 }
 
+// Sistema de Navegação entre Seções
+function scrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+        const headerHeight = 60; // Altura do header
+        const elementPosition = targetElement.offsetTop - headerHeight;
+        
+        window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+        });
+        
+        // Track navigation event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'section_navigation', {
+                event_category: 'engagement',
+                event_label: targetId
+            });
+        }
+    }
+}
+
+// Função de navegação inteligente por botão
+function navigateBySection(currentSection) {
+    const sectionMap = {
+        'hero': 'method-overview',
+        'method-overview': 'pilares', 
+        'pilares': 'problema-escolas',
+        'problema-escolas': 'conteudo-detalhado',
+        'conteudo-detalhado': 'beneficios-especificos',
+        'beneficios-especificos': 'depoimentos',
+        'depoimentos': 'faq',
+        'faq': 'how-it-works',
+        'how-it-works': 'guarantee',
+        'guarantee': 'contato-section',
+        'contato-section': 'oferta-final',
+        'oferta-final': 'checkout' // Último botão vai para checkout
+    };
+    
+    const nextSection = sectionMap[currentSection];
+    
+    if (nextSection === 'checkout') {
+        // Último botão - vai para Hotmart
+        goToCheckout('final');
+    } else if (nextSection) {
+        // Navega para próxima seção
+        scrollToSection(nextSection);
+    }
+}
+
 // Função principal para checkout
 function goToCheckout(source = 'default') {
-    // Determinar que produto foi selecionado
-    let productType = 'ebook';
-    let price = 49.99;
+    // Produto: O Segredo do Inglês Completo
+    let productType = 'curso_completo';
+    let price = 97.00;
     
-    if (source === 'class_only') {
-        productType = 'class_only';
-        price = 50.00;
-        
-        // Track evento para aula só
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'start_checkout_class_only', {
-                event_category: 'conversion',
-                event_label: 'class_only',
-                value: price
-            });
-        }
-        
-        console.log('Checkout aula só iniciado');
-        alert('Redirecionando para checkout da aula (R$ 50)...');
-        // window.location.href = 'https://pay.hotmart.com/CLASS_ONLY_LINK';
-        
-    } else {
-        // Track evento para eBook
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'start_checkout_ebook', {
-                event_category: 'conversion', 
-                event_label: source,
-                value: price
-            });
-        }
-        
-        // Track evento no Hotmart (se disponível)
-        if (typeof hotmart !== 'undefined') {
-            hotmart('track', 'checkout_click', {
-                source: source,
-                product_id: 'EBOOK_PRODUCT_ID'
-            });
-        }
-        
-        console.log('Checkout eBook iniciado');
-        alert('Redirecionando para checkout do eBook (R$ 49,99)...');
-        // window.location.href = 'https://pay.hotmart.com/EBOOK_LINK';
+    // Track evento para compra
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'begin_checkout', {
+            event_category: 'ecommerce',
+            event_label: source,
+            value: price,
+            currency: 'BRL'
+        });
     }
+    
+    // Track evento no Hotmart (se disponível)
+    if (typeof hotmart !== 'undefined') {
+        hotmart('track', 'checkout_click', {
+            source: source,
+            product_id: 'SEGREDO_INGLES_COMPLETO'
+        });
+    }
+    
+    console.log('Checkout O Segredo do Inglês iniciado - Fonte:', source);
+    
+    // URL do Hotmart (SUBSTITUA PELA SUA URL REAL)
+    const hotmartUrl = 'https://pay.hotmart.com/YOUR_CHECKOUT_URL';
     
     // Adiciona loading state premium ao botão clicado
     if (typeof event !== 'undefined' && event.target) {
         const button = event.target;
         const originalText = button.innerHTML;
-        button.innerHTML = '<span class="spinner"></span>Redirecionando...';
+        button.innerHTML = '<span class="spinner"></span> Redirecionando...';
         button.classList.add('loading');
         
-        // Restaura o botão após delay
+        // Simula redirecionamento (remova o alert quando tiver a URL real)
         setTimeout(() => {
+            alert(`Redirecionando para checkout do Segredo do Inglês (R$ ${price.toFixed(2).replace('.', ',')})...\n\nFonte: ${source}\n\nSubstitua pela URL real do Hotmart!`);
+            // window.open(hotmartUrl, '_blank'); // Descomente quando tiver a URL real
+            
+            // Restaura o botão
             button.innerHTML = originalText;
             button.classList.remove('loading');
-        }, 2000);
+        }, 1500);
+    } else {
+        // Fallback se não houver botão
+        alert(`Redirecionando para checkout do Segredo do Inglês (R$ ${price.toFixed(2).replace('.', ',')})...\n\nSubstitua pela URL real do Hotmart!`);
+        // window.open(hotmartUrl, '_blank');
     }
 }
 
