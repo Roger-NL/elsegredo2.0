@@ -656,35 +656,10 @@ function initHeaderBehavior() {
     });
 }
 
-// Função para abrir WhatsApp com mensagem automática
-function openWhatsApp() {
-    const name = document.getElementById('whatsapp-name').value.trim();
-    const phone = document.getElementById('whatsapp-phone').value.trim();
-    
-    // Validação
-    if (!name) {
-        alert('Por favor, insira seu nome completo.');
-        document.getElementById('whatsapp-name').focus();
-        return;
-    }
-    
-    if (!phone) {
-        alert('Por favor, insira seu WhatsApp.');
-        document.getElementById('whatsapp-phone').focus();
-        return;
-    }
-    
-    // Formatar número do WhatsApp (remover caracteres especiais)
-    const cleanPhone = phone.replace(/\D/g, '');
-    
-    if (cleanPhone.length < 10 || cleanPhone.length > 11) {
-        alert('Por favor, insira um WhatsApp válido com DDD.');
-        document.getElementById('whatsapp-phone').focus();
-        return;
-    }
-    
-    // Mensagem automática personalizada
-    const message = `Olá! Meu nome é ${name} e quero receber mais informações sobre o método secreto do inglês. Pode me ajudar?`;
+// Função para abrir WhatsApp diretamente com mensagem automática
+function openWhatsAppDirect() {
+    // Mensagem automática pré-definida
+    const message = `Olá! Quero receber mais informações sobre o método secreto do inglês. Pode me ajudar?`;
     
     // Codificar a mensagem para URL
     const encodedMessage = encodeURIComponent(message);
@@ -700,9 +675,9 @@ function openWhatsApp() {
     
     // Tracking do evento
     if (typeof gtag !== 'undefined') {
-        gtag('event', 'whatsapp_click', {
+        gtag('event', 'whatsapp_direct_click', {
             event_category: 'engagement',
-            event_label: 'hero_whatsapp_form'
+            event_label: 'hero_whatsapp_direct'
         });
     }
     
@@ -710,7 +685,7 @@ function openWhatsApp() {
     const button = event.target.closest('button');
     if (button) {
         const originalText = button.innerHTML;
-        button.innerHTML = '<span class="text-2xl">✅</span> WhatsApp Aberto!';
+        button.innerHTML = '<span class="text-3xl">✅</span> WhatsApp Aberto!';
         button.classList.add('bg-green-600');
         
         setTimeout(() => {
