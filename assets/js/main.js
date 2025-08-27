@@ -656,6 +656,70 @@ function initHeaderBehavior() {
     });
 }
 
+// Função para abrir WhatsApp com mensagem automática
+function openWhatsApp() {
+    const name = document.getElementById('whatsapp-name').value.trim();
+    const phone = document.getElementById('whatsapp-phone').value.trim();
+    
+    // Validação
+    if (!name) {
+        alert('Por favor, insira seu nome completo.');
+        document.getElementById('whatsapp-name').focus();
+        return;
+    }
+    
+    if (!phone) {
+        alert('Por favor, insira seu WhatsApp.');
+        document.getElementById('whatsapp-phone').focus();
+        return;
+    }
+    
+    // Formatar número do WhatsApp (remover caracteres especiais)
+    const cleanPhone = phone.replace(/\D/g, '');
+    
+    if (cleanPhone.length < 10 || cleanPhone.length > 11) {
+        alert('Por favor, insira um WhatsApp válido com DDD.');
+        document.getElementById('whatsapp-phone').focus();
+        return;
+    }
+    
+    // Mensagem automática personalizada
+    const message = `Olá! Meu nome é ${name} e quero receber mais informações sobre o método secreto do inglês. Pode me ajudar?`;
+    
+    // Codificar a mensagem para URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Número do WhatsApp (substitua pelo seu número real)
+    const whatsappNumber = '5511999999999'; // Exemplo: 11 99999-9999
+    
+    // Criar link do WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Abrir WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Tracking do evento
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'whatsapp_click', {
+            event_category: 'engagement',
+            event_label: 'hero_whatsapp_form'
+        });
+    }
+    
+    // Feedback visual
+    const button = event.target.closest('button');
+    if (button) {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<span class="text-2xl">✅</span> WhatsApp Aberto!';
+        button.classList.add('bg-green-600');
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('bg-green-600');
+        }, 3000);
+    }
+}
+
 // Event listeners para scroll otimizados
 window.addEventListener('scroll', debounce(() => {
     updateScrollProgress();

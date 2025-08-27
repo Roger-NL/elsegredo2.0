@@ -131,30 +131,37 @@
                     </div>
                 </div>
                 
-                <!-- Form Right Side -->
+                <!-- WhatsApp Form Right Side -->
                 <div class="animate-fadeInRight">
                     <div class="bg-gradient-to-br from-dark-gray-800 to-dark-gray-900 p-10 rounded-3xl border border-gray-700 shadow-2xl backdrop-blur-sm">
                         <div class="text-center mb-8">
-                            <div class="w-20 h-20 bg-gradient-to-br from-gold-primary to-gold-dark rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                                <span class="text-3xl">📖</span>
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                                <span class="text-3xl">📱</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">O Segredo do Inglês</h3>
-                            <p class="text-gray-300 text-base">Método exclusivo e comprovado</p>
+                            <h3 class="text-2xl font-bold text-white mb-3">Quer Mais Informações?</h3>
+                            <p class="text-gray-300 text-base">Receba detalhes exclusivos via WhatsApp</p>
                         </div>
                         
-                        <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="space-y-6">
                             <div>
-                                <input type="email" placeholder="Seu melhor email" required 
-                                       class="w-full px-6 py-4 bg-dark-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-gold-primary focus:outline-none focus:ring-2 focus:ring-gold-primary/20 transition-all duration-300 text-lg">
+                                <input type="text" id="whatsapp-name" placeholder="Seu nome completo" required 
+                                       class="w-full px-6 py-4 bg-dark-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 transition-all duration-300 text-lg">
                             </div>
                             <div>
-                                <input type="tel" placeholder="Seu WhatsApp (opcional)" 
-                                       class="w-full px-6 py-4 bg-dark-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-gold-primary focus:outline-none focus:ring-2 focus:ring-gold-primary/20 transition-all duration-300 text-lg">
+                                <input type="tel" id="whatsapp-phone" placeholder="Seu WhatsApp (com DDD)" required 
+                                       class="w-full px-6 py-4 bg-dark-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 transition-all duration-300 text-lg">
                             </div>
-                            <button type="submit" class="w-full py-4 px-6 bg-gradient-to-r from-gold-primary to-gold-dark text-black font-bold text-lg rounded-xl hover:from-gold-dark hover:to-gold-primary transition-all duration-300 transform hover:scale-105 shadow-lg">
-                                🎁 DESCOBRIR O SEGREDO
+                            <button onclick="openWhatsApp()" class="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-3">
+                                <span class="text-2xl">📱</span>
+                                RECEBER INFORMAÇÕES NO WHATSAPP
                             </button>
-                        </form>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
+                            <p class="text-sm text-green-400 text-center">
+                                <span class="font-semibold">✨ Bônus:</span> Você receberá uma mensagem automática com informações exclusivas sobre o método!
+                            </p>
+                        </div>
                         
                         <p class="text-sm text-gray-400 text-center mt-6 flex items-center justify-center gap-2">
                             <span class="text-green-500">🔒</span>

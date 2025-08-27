@@ -805,7 +805,12 @@ section .container {
 
 /* Ajuste para seções após o hero */
 section:not(#hero) {
-    padding-top: calc(var(--space-40) + 10px); /* Espaço reduzido para header minimal */
+    padding-top: calc(var(--space-40) + 40px); /* Espaço aumentado entre seções */
+}
+
+/* Espaçamento específico para seções adjacentes */
+section + section {
+    margin-top: var(--space-16); /* Espaço adicional entre seções */
 }
 
 /* Card Perfect Centering */
