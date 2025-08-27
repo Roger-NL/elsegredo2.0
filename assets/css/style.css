@@ -819,12 +819,17 @@ section .container {
 
 /* Ajuste para seções após o hero */
 section:not(#hero) {
-    padding-top: calc(var(--space-20) + 20px); /* Espaço equilibrado entre seções */
+    padding-top: calc(var(--space-16) + 16px); /* Espaço reduzido entre seções */
 }
 
 /* Espaçamento específico para seções adjacentes */
 section + section {
-    margin-top: var(--space-8); /* Espaço moderado entre seções */
+    margin-top: var(--space-4); /* Espaço menor entre seções */
+}
+
+/* Primeira seção após o hero com espaçamento especial */
+#method-overview {
+    padding-top: calc(var(--space-16) + 8px); /* Espaço ainda menor para primeira seção */
 }
 
 /* Espaçamento interno das seções */
