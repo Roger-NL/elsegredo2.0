@@ -150,20 +150,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    padding-top: 80px !important; /* Espaço para o header fixo */
-}
-
-/* Forçar espaçamento para o header fixo */
-body::before {
-    content: '';
-    display: block;
-    height: 80px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9998;
-    pointer-events: none;
+    padding-top: 50px !important; /* Espaço para o header minimal */
 }
 
 /* Prevent horizontal overflow on all elements */
@@ -783,7 +770,7 @@ p {
     position: relative;
     overflow: hidden;
     padding: var(--space-20) 0;
-    margin-top: -80px; /* Compensar o padding-top do body */
+    margin-top: -50px; /* Compensar o padding-top do body */
 }
 
 #hero .container {
@@ -818,7 +805,7 @@ section .container {
 
 /* Ajuste para seções após o hero */
 section:not(#hero) {
-    padding-top: calc(var(--space-40) + 20px); /* Adicionar espaço extra para compensar o header */
+    padding-top: calc(var(--space-40) + 10px); /* Espaço reduzido para header minimal */
 }
 
 /* Card Perfect Centering */
@@ -1210,18 +1197,37 @@ form, input, button {
     font-weight: 400;
 }
 
-/* Header Fixo - Estilos específicos */
-header.fixed, header[class*="fixed"] {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 9999 !important;
-    background: rgba(0, 0, 0, 0.95) !important;
-    backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
-    transition: all 0.3s ease !important;
-    height: 80px !important;
+/* Header Minimal - Pequeno e que desaparece ao rolar */
+.header-minimal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 50px;
+    transform: translateY(0);
+}
+
+.header-minimal.header-hidden {
+    transform: translateY(-100%);
+}
+
+.header-minimal .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-minimal .text-xl {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 header.fixed:hover {

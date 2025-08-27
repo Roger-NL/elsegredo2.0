@@ -605,9 +605,16 @@ function debounce(func, wait) {
     };
 }
 
+// Header que desaparece ao rolar
+let lastScrollTop = 0;
+let header;
+
 // Inicialização quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', function() {
     console.log('O Código Secreto do Inglês - Site Premium carregado');
+    
+    // Inicializa header minimal
+    initHeaderBehavior();
     
     // Inicializa sistemas premium corrigidos
     new PremiumAnimations();
@@ -627,6 +634,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Função para controlar o comportamento do header
+function initHeaderBehavior() {
+    header = document.getElementById('header');
+    if (!header) return;
+    
+    // Event listener para scroll
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Rolando para baixo - esconder header
+            header.classList.add('header-hidden');
+        } else {
+            // Rolando para cima - mostrar header
+            header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+}
 
 // Event listeners para scroll otimizados
 window.addEventListener('scroll', debounce(() => {
