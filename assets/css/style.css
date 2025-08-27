@@ -656,6 +656,20 @@ p {
     margin: 0 auto;
 }
 
+/* Ajuste específico para grids de benefícios */
+.grid.md\\:grid-cols-3 {
+    gap: var(--space-8) !important; /* Força espaçamento equilibrado */
+}
+
+/* Ajuste para cards individuais */
+.card {
+    margin-bottom: var(--space-6); /* Espaçamento entre cards */
+}
+
+.card:last-child {
+    margin-bottom: 0; /* Remove margem do último card */
+}
+
 /* Grid com espaçamento desigual */
 .grid-featured {
     display: grid;
@@ -805,12 +819,30 @@ section .container {
 
 /* Ajuste para seções após o hero */
 section:not(#hero) {
-    padding-top: calc(var(--space-40) + 40px); /* Espaço aumentado entre seções */
+    padding-top: calc(var(--space-20) + 20px); /* Espaço equilibrado entre seções */
 }
 
 /* Espaçamento específico para seções adjacentes */
 section + section {
-    margin-top: var(--space-16); /* Espaço adicional entre seções */
+    margin-top: var(--space-8); /* Espaço moderado entre seções */
+}
+
+/* Espaçamento interno das seções */
+.section-header {
+    margin-bottom: var(--space-16); /* Padrão para headers de seção */
+}
+
+.section-content {
+    margin-bottom: var(--space-12); /* Padrão para conteúdo de seção */
+}
+
+/* Ajuste específico para seções com muito conteúdo */
+#pilares .pilar-item {
+    margin-bottom: var(--space-8); /* Espaçamento entre pilares */
+}
+
+#pilares .pilar-item:last-child {
+    margin-bottom: 0; /* Remove margem do último pilar */
 }
 
 /* Card Perfect Centering */
