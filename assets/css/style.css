@@ -850,36 +850,49 @@ section + section {
     margin-bottom: 0; /* Remove margem do último pilar */
 }
 
-/* Centralizar elementos de benefícios */
+/* Centralizar elementos de benefícios - FORÇAR com !important */
 .benefit-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-4);
-    margin: 0 auto;
-    max-width: 600px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: var(--space-4) !important;
+    margin: 0 auto !important;
+    max-width: 600px !important;
+    text-align: center !important;
 }
 
 .benefit-items .flex {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
 }
 
 .benefit-items .flex-1 {
-    text-align: center;
+    text-align: center !important;
 }
 
 .benefit-items h4 {
-    text-align: center;
-    margin: 0 auto;
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 
 .benefit-items p {
-    text-align: center;
-    margin: 0 auto;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+/* Forçar centralização dos pontos coloridos */
+.benefit-items .w-2.h-2 {
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* Forçar centralização do conteúdo */
+.benefit-items .flex > div:last-child {
+    text-align: center !important;
+    width: 100% !important;
 }
 
 /* Card Perfect Centering */
