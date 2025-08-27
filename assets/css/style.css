@@ -895,6 +895,15 @@ section + section {
     width: 100% !important;
 }
 
+/* Forçar espaçamento no card de WhatsApp */
+.animate-fadeInRight .mt-20 {
+    margin-top: 5rem !important; /* 80px */
+}
+
+.animate-fadeInRight .mt-16 {
+    margin-top: 4rem !important; /* 64px */
+}
+
 /* Card Perfect Centering */
 .card {
     margin: 0 auto;
