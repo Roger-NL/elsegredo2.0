@@ -132,6 +132,10 @@ html {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Mobile performance optimizations */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -151,6 +155,10 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     padding-top: 50px !important; /* Espaço para o header minimal */
+    /* Mobile touch optimizations */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 /* Prevent horizontal overflow on all elements */
@@ -2166,279 +2174,300 @@ a:focus {
     background: var(--brand-blue-dark);
 }
 
-/* Responsividade Mobile-First Ultra-Premium */
-@media (max-width: 1024px) {
-    /* Tablet ajustes */
-    .container {
-        padding: 0 var(--space-md);
-    }
-    
-    .section {
-        padding: var(--space-2xl) 0;
-    }
-    
-    .hero-title {
-        font-size: clamp(2.5rem, 6vw, 3.5rem);
-    }
-    
-    .card {
-        padding: var(--space-lg);
-    }
-}
+/* MOBILE-FIRST RESPONSIVIDADE OTIMIZADA */
 
-@media (max-width: 768px) {
-    /* Mobile grande */
-    .section {
-        padding: var(--space-xl) 0;
-    }
-    
+/* Mobile pequeno (320px+) - Base */
+@media (max-width: 480px) {
+    /* Container mobile */
     .container {
-        padding: 0 var(--space-md);
+        padding: 0 16px !important;
+        max-width: 100% !important;
     }
     
-    .hero-title {
-        font-size: clamp(2.2rem, 7vw, 3rem);
-        line-height: 1.2;
-        margin-bottom: var(--space-md);
+    /* Seções mobile */
+    .section, section {
+        padding: 32px 0 !important;
     }
     
-    .hero-subtitle {
-        font-size: 1.125rem;
-        margin-bottom: var(--space-lg);
-    }
-    
-    .btn {
-        padding: var(--space-md) var(--space-lg);
-        font-size: 1rem;
-        width: 100%;
-        justify-content: center;
-        max-width: 400px;
-        margin: 0 auto;
-        min-height: 48px; /* Touch target size */
-        touch-action: manipulation; /* Previne zoom no touch */
-    }
-    
-    .btn-large {
-        padding: var(--space-lg) var(--space-xl);
-        font-size: 1.125rem;
-        max-width: 100%;
-        min-height: 52px; /* Maior touch target */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .card {
-        padding: var(--space-lg);
-        margin-bottom: var(--space-md);
-    }
-    
-    /* Grid responsivo */
-    .grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-lg) !important;
-    }
-    
-    /* Hero mobile */
+    /* Hero mobile otimizado */
     #hero {
-        min-height: 90vh;
-        padding: var(--space-lg) 0;
+        min-height: 100vh !important;
+        padding: 60px 0 32px 0 !important;
+        margin-top: -50px !important;
     }
     
     .hero-content {
-        padding: 0 var(--space-md);
+        padding: 0 16px !important;
+        max-width: 100% !important;
     }
     
-    /* E-book mockup mobile - FIXO SEM FLUTUAÇÃO */
-    .ebook-mockup {
-        animation: none !important;
-        transform: none !important;
-        max-width: 280px;
-        margin: var(--space-lg) auto;
-        position: static !important;
+    /* Typography mobile otimizada */
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+        margin-bottom: 16px !important;
+        padding: 0 8px !important;
     }
     
-    /* Cards mobile */
-    .card-hover:hover {
-        transform: translateY(-4px) scale(1.01) !important;
-    }
-    
-    /* Testimonials mobile */
-    .testimonial-card {
-        margin-bottom: var(--space-md);
-    }
-    
-    /* Seção produto mobile */
-    #produto .grid {
-        gap: var(--space-xl) !important;
-        text-align: center;
-    }
-    
-    /* Bônus cards mobile */
-    #bonus .grid {
-        gap: var(--space-lg) !important;
-    }
-    
-    /* Typography mobile */
     h2 {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-        margin-bottom: var(--space-md);
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+        padding: 0 8px !important;
     }
     
     h3 {
-        font-size: clamp(1.4rem, 4vw, 1.8rem);
-        margin-bottom: var(--space-sm);
-    }
-    
-    p {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: var(--space-sm);
-    }
-}
-
-@media (max-width: 480px) {
-    /* Mobile pequeno */
-    .container {
-        padding: 0 var(--space-sm);
-    }
-    
-    .section {
-        padding: var(--space-lg) 0;
-    }
-    
-    .hero-title {
-        font-size: clamp(2rem, 8vw, 2.5rem);
-        line-height: 1.1;
-        margin-bottom: var(--space-sm);
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: var(--space-md);
-    }
-    
-    .btn {
-        padding: var(--space-md) var(--space-lg);
-        font-size: 0.95rem;
-        width: 100%;
-        border-radius: 12px;
-    }
-    
-    .btn-large {
-        padding: var(--space-md) var(--space-lg);
-        font-size: 1rem;
-    }
-    
-    .card {
-        padding: var(--space-md);
-        border-radius: 16px;
-    }
-    
-    .testimonial-card {
-        padding: var(--space-md);
-        border-radius: 16px;
-    }
-    
-    /* E-book mockup extra pequeno */
-    .ebook-mockup {
-        max-width: 220px !important;
-        margin: var(--space-md) auto !important;
-    }
-    
-    .ebook-mockup svg {
-        width: 100% !important;
-        height: auto !important;
-    }
-    
-    /* Avatar mobile */
-    .avatar {
-        width: 48px !important;
-        height: 48px !important;
-        margin-right: var(--space-sm) !important;
-    }
-    
-    /* Typography extra pequeno */
-    h2 {
-        font-size: clamp(1.6rem, 6vw, 2rem);
-        line-height: 1.15;
-    }
-    
-    h3 {
-        font-size: clamp(1.3rem, 5vw, 1.6rem);
-        line-height: 1.2;
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
     }
     
     h4 {
-        font-size: clamp(1.1rem, 4vw, 1.4rem);
+        font-size: 1.25rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
     }
     
     p {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 16px !important;
+        padding: 0 8px !important;
     }
     
-    /* Espaçamentos reduzidos */
-    .space-y-6 > * + * {
-        margin-top: var(--space-sm) !important;
+    /* Botões mobile otimizados */
+    .btn, .btn-gold, .btn-gold-large, button {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 48px !important;
+        padding: 16px 24px !important;
+        font-size: 1rem !important;
+        margin: 16px 0 !important;
+        border-radius: 12px !important;
+        touch-action: manipulation !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
-    /* Hero mobile extra pequeno */
+    /* Cards mobile otimizados */
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 24px 0 !important;
+        padding: 20px 16px !important;
+        border-radius: 12px !important;
+        min-height: auto !important;
+        text-align: center !important;
+    }
+    
+    .card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .card p {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Grids mobile */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 16px !important;
+    }
+    
+    /* Pilares mobile */
+    .pilar-item {
+        margin-bottom: 24px !important;
+        padding: 20px 16px !important;
+        border-radius: 12px !important;
+    }
+    
+    .pilar-item h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .pilar-item .benefit-items {
+        gap: 12px !important;
+        margin-top: 16px !important;
+    }
+    
+    .benefit-items .flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+    }
+    
+    .benefit-items h4 {
+        font-size: 1.1rem !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .benefit-items p {
+        font-size: 0.9rem !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Header mobile */
+    .header-minimal {
+        height: 48px !important;
+    }
+    
+    .header-minimal .text-xl {
+        font-size: 1rem !important;
+    }
+    
+    /* Ajustar body para header menor */
+    body {
+        padding-top: 48px !important;
+    }
+    
     #hero {
-        min-height: 80vh;
-        padding: var(--space-md) 0;
-    }
-    
-    .hero-content {
-        padding: 0 var(--space-sm);
-        max-width: 100%;
-    }
-    
-    /* Oferta final mobile */
-    #oferta-final .text-6xl {
-        font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
-    }
-    
-    /* Tabela de preços mobile */
-    .gradient-border {
-        padding: var(--space-md);
-        border-radius: 16px;
+        margin-top: -48px !important;
     }
 }
 
-@media (max-width: 375px) {
-    /* Mobile extra pequeno (iPhone SE) */
+/* Mobile médio (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
     .container {
-        padding: 0 var(--space-xs);
+        padding: 0 24px !important;
     }
     
-    .hero-title {
-        font-size: clamp(1.8rem, 9vw, 2.2rem);
+    .section, section {
+        padding: 48px 0 !important;
     }
     
-    .hero-subtitle {
-        font-size: 0.95rem;
-    }
-    
-    .btn {
-        padding: var(--space-sm) var(--space-md);
-        font-size: 0.9rem;
-    }
-    
-    .card {
-        padding: var(--space-sm);
-    }
-    
-    .ebook-mockup {
-        max-width: 180px !important;
+    h1 {
+        font-size: 2.5rem !important;
     }
     
     h2 {
-        font-size: clamp(1.4rem, 7vw, 1.8rem);
+        font-size: 2rem !important;
     }
     
-    h3 {
-        font-size: clamp(1.2rem, 6vw, 1.5rem);
+    .card {
+        padding: 24px 20px !important;
+    }
+    
+    .grid {
+        gap: 24px !important;
+        padding: 0 24px !important;
+    }
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 32px !important;
+    }
+    
+    .section, section {
+        padding: 64px 0 !important;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 32px !important;
+    }
+    
+    .card {
+        padding: 32px 24px !important;
+    }
+}
+
+/* WhatsApp Section Mobile Otimizada */
+@media (max-width: 480px) {
+    #whatsapp-section {
+        padding: 40px 0 !important;
+    }
+    
+    #whatsapp-section .container {
+        padding: 0 16px !important;
+    }
+    
+    #whatsapp-section h2 {
+        font-size: 1.75rem !important;
+        margin-bottom: 12px !important;
+    }
+    
+    #whatsapp-section p {
+        font-size: 1rem !important;
+        margin-bottom: 24px !important;
+    }
+    
+    #whatsapp-section .btn {
+        width: 100% !important;
+        padding: 18px 24px !important;
+        font-size: 1.1rem !important;
+        min-height: 52px !important;
+        margin: 20px 0 !important;
+    }
+    
+    /* Benefícios WhatsApp mobile */
+    #whatsapp-section .grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        margin-top: 24px !important;
+    }
+    
+    #whatsapp-section .bg-white\/10 {
+        padding: 16px !important;
+        border-radius: 12px !important;
+    }
+    
+    #whatsapp-section .w-12 {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    #whatsapp-section .text-sm {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Badge mobile */
+    #whatsapp-section .bg-green-500 {
+        padding: 8px 16px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Mobile Extra Pequeno (375px e menor) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 12px !important;
+    }
+    
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .btn, .btn-gold, .btn-gold-large {
+        padding: 14px 20px !important;
+        font-size: 0.95rem !important;
+        min-height: 44px !important;
+    }
+    
+    .card {
+        padding: 16px 12px !important;
+    }
+    
+    /* WhatsApp section para telas muito pequenas */
+    #whatsapp-section .btn {
+        padding: 16px 20px !important;
+        font-size: 1rem !important;
+        min-height: 48px !important;
     }
 }
 
