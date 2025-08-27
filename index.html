@@ -919,158 +919,58 @@
         </div>
     </section>
 
-    <!-- Seção WhatsApp Premium -->
-    <section id="whatsapp-section" class="py-20 bg-gradient-to-br from-green-600 via-green-700 to-green-800 relative overflow-hidden">
-        <!-- Background Effects -->
-        <div class="absolute inset-0 bg-gradient-to-r from-green-600/20 to-transparent"></div>
-        <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
-            <div class="w-full h-full bg-gradient-to-l from-white to-transparent"></div>
-        </div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div class="absolute bottom-20 right-20 w-32 h-32 bg-white/5 rounded-full animate-bounce"></div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-5xl mx-auto text-center">
+    <!-- Seção WhatsApp Mobile-First -->
+    <section id="whatsapp-section" class="py-12 bg-green-600">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Header -->
+            <h2 class="text-2xl font-bold text-white mb-3">
+                💬 Fale Conosco no WhatsApp
+            </h2>
+            <p class="text-green-100 mb-8 max-w-md mx-auto">
+                Tire suas dúvidas e receba orientação personalizada!
+            </p>
+            
+            <!-- WhatsApp Card -->
+            <div class="bg-white rounded-xl p-6 max-w-sm mx-auto shadow-lg">
+                <!-- WhatsApp Icon -->
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-3xl">📱</span>
+                </div>
                 
-                <!-- Header -->
-                <div class="mb-16">
-                    <div class="inline-flex items-center gap-4 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 mb-8">
-                        <span class="text-4xl">📱</span>
-                        <span class="text-xl font-bold text-white">Atendimento Exclusivo</span>
-                    </div>
-                    
-                    <h2 class="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                        Tire suas <span class="text-yellow-300">dúvidas</span> direto conosco!
-                    </h2>
-                    
-                    <p class="text-2xl text-green-100 leading-relaxed max-w-4xl mx-auto">
-                        Nossa equipe está pronta para te ajudar a <strong class="text-white">começar sua jornada</strong> rumo à fluência no inglês
-                    </p>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Atendimento Rápido</h3>
+                <p class="text-gray-600 text-sm mb-6">
+                    Nossa equipe responde em até 5 minutos!
+                </p>
+                
+                <!-- WhatsApp Button -->
+                <button onclick="openWhatsAppDirect()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md mb-4">
+                    <span class="text-xl">💬</span>
+                    ABRIR WHATSAPP
+                </button>
+                
+                <!-- Trust indicators -->
+                <div class="flex justify-center gap-4 text-xs text-gray-500">
+                    <span>⚡ Resposta rápida</span>
+                    <span>•</span>
+                    <span>🔒 100% seguro</span>
                 </div>
-
-                <!-- Main WhatsApp Card -->
-                <div class="bg-white/95 backdrop-blur-lg rounded-3xl p-12 shadow-2xl border border-white/20 relative mb-12">
-                    <!-- Badge -->
-                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                        <div class="bg-yellow-400 text-green-800 px-8 py-3 rounded-full text-lg font-bold shadow-lg">
-                            🌟 ATENDIMENTO VIP
-                        </div>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        
-                        <!-- Left Side - Benefits -->
-                        <div class="text-left space-y-6">
-                            <h3 class="text-3xl font-bold text-gray-800 mb-8">
-                                Por que falar conosco no WhatsApp?
-                            </h3>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span class="text-xl">⚡</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Resposta Imediata</h4>
-                                        <p class="text-gray-600">Nossa equipe responde em até 5 minutos durante o horário comercial</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span class="text-xl">🎯</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Orientação Personalizada</h4>
-                                        <p class="text-gray-600">Receba dicas específicas para seu nível e objetivos no inglês</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span class="text-xl">🤝</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Suporte Humano</h4>
-                                        <p class="text-gray-600">Converse com pessoas reais que entendem sua jornada de aprendizado</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span class="text-xl">🎁</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Bônus Exclusivos</h4>
-                                        <p class="text-gray-600">Quem contata via WhatsApp recebe materiais extras gratuitos!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Side - Call to Action -->
-                        <div class="text-center">
-                            <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white relative">
-                                <!-- WhatsApp Icon -->
-                                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                                    <span class="text-5xl">📱</span>
-                                </div>
-                                
-                                <h3 class="text-2xl font-bold mb-4">Clique e fale conosco agora!</h3>
-                                <p class="text-green-100 mb-8 text-lg">
-                                    Sua mensagem será atendida por um especialista em inglês
-                                </p>
-                                
-                                <!-- WhatsApp Button -->
-                                <button onclick="openWhatsAppDirect()" class="w-full py-6 px-8 bg-white text-green-600 font-bold text-2xl rounded-2xl hover:bg-green-50 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-4 mb-6">
-                                    <span class="text-3xl">💬</span>
-                                    CONVERSAR NO WHATSAPP
-                                </button>
-                                
-                                <!-- Trust Indicators -->
-                                <div class="grid grid-cols-2 gap-4 text-sm">
-                                    <div class="bg-white/20 rounded-lg p-3">
-                                        <div class="font-bold">+5.000</div>
-                                        <div class="text-green-100">Alunos atendidos</div>
-                                    </div>
-                                    <div class="bg-white/20 rounded-lg p-3">
-                                        <div class="font-bold">4.9★</div>
-                                        <div class="text-green-100">Avaliação média</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            
+            <!-- Quick Benefits -->
+            <div class="grid grid-cols-3 gap-3 max-w-md mx-auto mt-8">
+                <div class="bg-white/10 rounded-lg p-3 text-white">
+                    <div class="text-xl mb-1">🎯</div>
+                    <p class="text-xs">Orientação<br>Personalizada</p>
                 </div>
-
-                <!-- Bottom Guarantees -->
-                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div class="text-center text-white">
-                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">🔐</span>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2">100% Privado</h4>
-                        <p class="text-green-100 text-sm">Sua conversa é confidencial e segura</p>
-                    </div>
-                    
-                    <div class="text-center text-white">
-                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">📞</span>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2">Sem Compromisso</h4>
-                        <p class="text-green-100 text-sm">Tire suas dúvidas sem pressão para comprar</p>
-                    </div>
-                    
-                    <div class="text-center text-white">
-                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">⏰</span>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2">Horário Estendido</h4>
-                        <p class="text-green-100 text-sm">Atendimento das 8h às 22h, todos os dias</p>
-                    </div>
+                
+                <div class="bg-white/10 rounded-lg p-3 text-white">
+                    <div class="text-xl mb-1">🎁</div>
+                    <p class="text-xs">Bônus<br>Exclusivos</p>
+                </div>
+                
+                <div class="bg-white/10 rounded-lg p-3 text-white">
+                    <div class="text-xl mb-1">⏰</div>
+                    <p class="text-xs">8h às 22h<br>Todos os dias</p>
                 </div>
             </div>
         </div>
