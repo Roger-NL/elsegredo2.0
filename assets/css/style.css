@@ -2404,19 +2404,19 @@ a:focus {
     
     /* Contact Card Mobile */
     #contato-section .bg-gradient-to-br {
-        max-width: 280px !important;
-        padding: 20px 16px !important;
+        max-width: 300px !important;
+        padding: 24px 20px !important;
         border-radius: 12px !important;
     }
     
-    #contato-section .w-16.h-16 {
-        width: 56px !important;
-        height: 56px !important;
+    #contato-section .w-20.h-20 {
+        width: 80px !important;
+        height: 80px !important;
         margin-bottom: 16px !important;
     }
     
-    #contato-section .text-3xl {
-        font-size: 2rem !important;
+    #contato-section .text-5xl {
+        font-size: 3rem !important;
     }
     
     #contato-section h3 {
@@ -2450,24 +2450,24 @@ a:focus {
     
     /* Benefits grid mobile */
     #contato-section .grid.grid-cols-3 {
-        gap: 8px !important;
+        gap: 12px !important;
         margin-top: 24px !important;
-        max-width: 240px !important;
+        max-width: 280px !important;
     }
     
     #contato-section .bg-gold-primary\/10 {
-        padding: 12px 8px !important;
+        padding: 16px 12px !important;
         border-radius: 8px !important;
     }
     
-    #contato-section .bg-gold-primary\/10 .text-xl {
-        font-size: 1.1rem !important;
-        margin-bottom: 4px !important;
+    #contato-section .bg-gold-primary\/10 .text-3xl {
+        font-size: 2rem !important;
+        margin-bottom: 8px !important;
     }
     
     #contato-section .bg-gold-primary\/10 p {
-        font-size: 0.7rem !important;
-        line-height: 1.2 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
         margin-bottom: 0 !important;
     }
 }
