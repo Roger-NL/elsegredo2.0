@@ -150,7 +150,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    padding-top: 80px; /* Espaço para o header fixo */
+    padding-top: 80px !important; /* Espaço para o header fixo */
+}
+
+/* Forçar espaçamento para o header fixo */
+body::before {
+    content: '';
+    display: block;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    pointer-events: none;
 }
 
 /* Prevent horizontal overflow on all elements */
@@ -1198,16 +1211,17 @@ form, input, button {
 }
 
 /* Header Fixo - Estilos específicos */
-header.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-    transition: all 0.3s ease;
+header.fixed, header[class*="fixed"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+    height: 80px !important;
 }
 
 header.fixed:hover {
