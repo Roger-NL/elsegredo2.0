@@ -850,6 +850,38 @@ section + section {
     margin-bottom: 0; /* Remove margem do último pilar */
 }
 
+/* Centralizar elementos de benefícios */
+.benefit-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.benefit-items .flex {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.benefit-items .flex-1 {
+    text-align: center;
+}
+
+.benefit-items h4 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.benefit-items p {
+    text-align: center;
+    margin: 0 auto;
+}
+
 /* Card Perfect Centering */
 .card {
     margin: 0 auto;
