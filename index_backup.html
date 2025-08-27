@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>eBook de Inglês + Aula Grátis | Oferta por Tempo Limitado</title>
+    <meta name="description" content="Aprenda inglês na prática com um ebook direto ao ponto. R$ 49,99 por tempo limitado e aula grátis após a compra.">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Google Analytics 4 Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        
+        // Função para rastrear eventos
+        function trackEvent(eventName, eventParams = {}) {
+            gtag('event', eventName, eventParams);
+        }
+    </script>
+    
+    <!-- Hotmart Tracking Script -->
+    <script>
+        (function(h,o,t,m,a,r,t){h['HotmartObject']=a;h[a]=h[a]||function(){
+        (h[a].q=h[a].q||[]).push(arguments)},h[a].l=1*new Date();r=o.createElement(t),
+        t=o.getElementsByTagName(t)[0];r.async=1;r.src=m;t.parentNode.insertBefore(r,t)
+        })(window,document,'script','https://loader.hotmart.com/hotmart.js','hotmart');
+        hotmart('init', 'YOUR_HOTMART_ID');
+    </script>
+    
+    <!-- TailwindCSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-black': '#0a0a0a',
+                        'dark-gray-900': '#111111',
+                        'dark-gray-800': '#1a1a1a',
+                        'dark-gray-700': '#2a2a2a',
+                        'dark-gray-600': '#3a3a3a',
+                        'dark-gray-500': '#4a4a4a',
+                        'dark-gray-400': '#6a6a6a',
+                        'gold-primary': '#FFD700',
+                        'gold-dark': '#FFC107',
+                        'primary': '#FFD700',
+                        'secondary': '#1a1a1a',
+                        'accent': '#FFC107'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    container: {
+                        center: true,
+                        padding: '2rem',
+                        screens: {
+                            'sm': '640px',
+                            'md': '768px',
+                            'lg': '1024px',
+                            'xl': '1280px',
+                            '2xl': '1536px',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter">
+    
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gold-primary">
+                SEU LOGO
+            </div>
+            <button onclick="goToCheckout('header')" class="btn-gold px-6 py-2 rounded-lg font-semibold">
+                ACESSO IMEDIATO
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section - Dark Professional -->
+    <section id="hero" class="min-h-screen bg-dark-black pt-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center justify-items-center min-h-[80vh] max-w-6xl mx-auto">
+                
+                <!-- Content Left Side -->
+                <div class="space-y-10 animate-fadeInLeft">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                        Aprenda inglês na prática com um <span class="text-gold-primary">eBook</span> direto ao ponto
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 leading-relaxed mb-10">
+                        Oferta por tempo limitado: leve o eBook por <strong class="text-gold-primary">R$ 49,99</strong> e receba <strong class="text-gold-primary">uma aula grátis</strong> após a compra. Preço cheio: <span class="line-through text-gray-500">R$ 99,90</span>
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <button onclick="goToCheckout('ebook')" class="btn-gold-large px-8 py-4 rounded-lg font-bold text-lg animate-gold-glow">
+                            💰 COMPRAR POR R$ 49,99
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400 pt-4">
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                            Promoção por tempo limitado
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            Download imediato
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            + Aula grátis incluída
+                        </span>
+                    </div>
+                    
+                    <div class="text-center pt-4">
+                        <a href="#" onclick="openClassOnlyModal()" class="text-gray-400 hover:text-gold-primary text-sm underline transition-colors duration-300">
+                            Quero só a aula (R$ 50)
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Form Right Side -->
+                <div class="animate-fadeInRight">
+                    <div class="bg-dark-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span class="text-2xl text-gray-300">👤</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Seu Nome Aqui</h3>
+                            <p class="text-gray-400">Especialista e Mentor</p>
+                        </div>
+                        
+                        <form class="space-y-4" onsubmit="goToCheckout('form'); return false;">
+                            <div>
+                                <input type="text" placeholder="Seu melhor e-mail" 
+                                       class="w-full px-4 py-3 bg-dark-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold-primary">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Seu WhatsApp" 
+                                       class="w-full px-4 py-3 bg-dark-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold-primary">
+                            </div>
+                            <button type="submit" class="w-full btn-gold-large py-4 rounded-lg font-bold">
+                                GARANTIR MINHA VAGA AGORA
+                            </button>
+                        </form>
+                        
+                        <p class="text-xs text-gray-500 text-center mt-4">
+                            Seus dados estão 100% seguros
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-1/3 h-full opacity-5">
+            <div class="w-full h-full bg-gradient-to-l from-gold-primary to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - Dark Theme -->
+    <section id="benefits" class="py-20 bg-dark-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    O que você <span class="text-gold-primary">recebe</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Tudo incluído na sua compra por apenas R$ 49,99
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">📖</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">eBook Essencial</h3>
+                    <p class="text-gray-400">
+                        Frases-chave e vocabulário de uso real para aplicar no dia a dia
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">✏️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Exercícios Práticos</h3>
+                    <p class="text-gray-400">
+                        Exercícios rápidos para fixar o conteúdo sem enrolação
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🎓</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Aula Grátis</h3>
+                    <p class="text-gray-400">
+                        Acesso a 1 aula grátis liberada automaticamente após a compra
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Como funciona Section -->
+    <section id="how-it-works" class="py-20 bg-dark-black">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gold-primary/5 via-transparent to-gold-primary/3 pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-gold-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-48 h-48 bg-gold-primary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 animate-fadeInUp">
+                        "Este método mudou <span class="text-gold-primary">completamente</span> minha vida"
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">
+                        Depois de testar dezenas de abordagens diferentes, finalmente encontrei o sistema que realmente funciona
+                    </p>
+                </div>
+                
+                <!-- Main Content Grid -->
+                <div class="grid lg:grid-cols-3 gap-12 items-start">
+                    
+                    <!-- Video Section -->
+                    <div class="lg:col-span-2 animate-fadeInLeft">
+                        <div class="relative group cursor-pointer" onclick="playVideo()">
+                            <div class="video-container aspect-video bg-gradient-to-br from-dark-gray-800 to-dark-gray-900 rounded-3xl border border-gray-700 overflow-hidden relative shadow-2xl">
+                                
+                                <!-- Video Background -->
+                                <div class="absolute inset-0 bg-gradient-to-br from-gray-800/50 to-black/80"></div>
+                                
+                                <!-- Play Button Center -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="play-button w-24 h-24 bg-gold-primary rounded-full flex items-center justify-center shadow-lg">
+                                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 5V19L19 12L8 5Z" fill="black"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Video Info Badge -->
+                                <div class="absolute top-6 left-6">
+                                    <div class="video-badge bg-gold-primary text-black px-4 py-2 rounded-full text-sm font-bold">
+                                        📹 Vídeo de Apresentação
+                                    </div>
+                                </div>
+                                
+                                <!-- Bottom Info -->
+                                <div class="absolute bottom-6 left-6 right-6">
+                                    <div class="bg-black/70 backdrop-blur-sm rounded-xl p-4">
+                                        <h3 class="text-white font-bold text-lg mb-1">Conheça o método completo</h3>
+                                        <p class="text-gray-300 text-sm">Apresentação exclusiva revelando todos os segredos</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Hover Overlay -->
+                                <div class="absolute inset-0 bg-gold-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            
+                            <!-- Call to Action Below Video -->
+                            <div class="mt-6 text-center">
+                                <p class="text-gray-400 mb-4">👆 Clique para assistir a apresentação completa</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefits Sidebar -->
+                    <div class="space-y-4 animate-fadeInRight">
+                        <!-- Benefits Cards -->
+                        <div class="benefit-card-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-gold-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-black text-2xl font-bold">✓</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-bold text-white mb-1">Método testado e aprovado</h4>
+                                    <p class="text-gray-300 text-base">Comprovado por mais de 10.000 pessoas em todo o Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-card-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-gold-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-black text-2xl font-bold">⚡</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-bold text-white mb-1">Resultados em tempo recorde</h4>
+                                    <p class="text-gray-300 text-base">Primeiras transformações visíveis já na primeira semana</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-card-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-gold-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-black text-2xl font-bold">🎯</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-bold text-white mb-1">Acompanhamento completo</h4>
+                                    <p class="text-gray-300 text-base">Suporte direto e comunidade exclusiva de alunos</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <div class="pt-6">
+                            <button onclick="goToCheckout('video')" class="w-full bg-gold-primary hover:bg-gold-dark text-black font-bold text-lg py-4 px-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                QUERO ACESSO AGORA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Módulos Section - Simples e Otimizada -->
+    <section id="modules" class="py-16 bg-dark-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    O que você vai aprender nos <span class="text-gold-primary">7 Módulos</span>
+                </h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Cronograma completo e estruturado para sua transformação
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- Módulo 1 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">1</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Fundamentos</h3>
+                            <p class="text-gray-300 text-base">Base sólida e estrutura mental para acelerar seu aprendizado</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">🎯</div>
+                    </div>
+                </div>
+                
+                <!-- Módulo 2 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">2</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Estratégias</h3>
+                            <p class="text-gray-300 text-base">Técnicas avançadas e métodos comprovados por especialistas</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">🚀</div>
+                    </div>
+                </div>
+                
+                <!-- Módulo 3 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">3</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Implementação</h3>
+                            <p class="text-gray-300 text-base">Como aplicar tudo na prática do seu dia a dia</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">💡</div>
+                    </div>
+                </div>
+                
+                <!-- Módulo 4 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">4</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Otimização</h3>
+                            <p class="text-gray-300 text-base">Acelere seus resultados e maximize seu potencial</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">📈</div>
+                    </div>
+                </div>
+                
+                <!-- Módulo 5 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">5</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Avançado</h3>
+                            <p class="text-gray-300 text-base">Técnicas de nível expert para resultados excepcionais</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">🎪</div>
+                    </div>
+                </div>
+                
+                <!-- Módulo 6 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">6</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Manutenção</h3>
+                            <p class="text-gray-300 text-base">Como manter e expandir seus resultados para sempre</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">🔥</div>
+                    </div>
+                </div>
+                
+                <!-- Módulo 7 -->
+                <div class="module-item-fixed bg-dark-gray-800 rounded-2xl p-6 border border-gray-600 hover:border-gold-primary/50 transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-black font-bold text-xl">7</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Maestria</h3>
+                            <p class="text-gray-300 text-base">Torne-se um verdadeiro especialista e referência</p>
+                        </div>
+                        <div class="hidden sm:block text-2xl">👑</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action Enhanced -->
+            <div class="text-center mt-20">
+                <div class="modules-cta backdrop-blur-sm rounded-3xl p-8 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        Comece sua jornada <span class="text-gold-primary">hoje mesmo</span>
+                    </h3>
+                    <p class="text-gray-400 mb-8">
+                        Acesso imediato a todos os 7 módulos + bônus exclusivos
+                    </p>
+                    <button onclick="goToCheckout('modules')" class="btn-gold-large px-12 py-5 rounded-2xl font-bold text-xl animate-gold-glow">
+                        🚀 QUERO ACESSO AOS 7 MÓDULOS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section - Dark Theme -->
+    <section id="final-cta" class="py-20 bg-dark-black">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Pronto para <span class="text-gold-primary">Transformar</span> sua vida?
+            </h2>
+                <p class="text-xl text-gray-400 mb-12">
+                    Junte-se a mais de 10.000 pessoas que já mudaram suas vidas com nosso método
+                </p>
+                
+                <div class="bg-dark-gray-800 rounded-2xl p-8 mb-12 border border-gray-700">
+                    <div class="grid md:grid-cols-2 gap-8 items-center justify-items-center">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-white mb-4">Investimento Único:</h3>
+                            <div class="text-5xl font-bold text-gold-primary mb-4">R$ 497</div>
+                            <p class="text-gray-400">Ou 12x de R$ 41,58</p>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h4 class="text-lg font-bold text-white mb-3">✓ Acesso Completo aos 7 Módulos</h4>
+                            <h4 class="text-lg font-bold text-white mb-3">✓ Suporte Direto por 6 meses</h4>
+                            <h4 class="text-lg font-bold text-white mb-3">✓ Comunidade Exclusiva</h4>
+                            <h4 class="text-lg font-bold text-white mb-3">✓ Garantia de 30 dias</h4>
+                    </div>
+                </div>
+            </div>
+
+                <button onclick="goToCheckout('final')" class="btn-gold-large px-12 py-5 rounded-lg font-bold text-xl mb-8 animate-gold-glow">
+                    🚀 QUERO COMEÇAR MINHA TRANSFORMAÇÃO AGORA
+                </button>
+                
+                <p class="text-gray-500 text-sm">
+                    Pagamento 100% seguro • Acesso imediato • Garantia de satisfação
+                </p>
+                
+                <div class="mt-12 p-6 bg-gold-primary bg-opacity-10 rounded-lg border border-gold-primary">
+                    <h4 class="text-lg font-bold text-gold-primary mb-2">🛡️ Garantia Total de 30 Dias</h4>
+                    <p class="text-gray-300">
+                        Se você não ficar completamente satisfeito com os resultados, devolvemos 100% do seu dinheiro. Sem perguntas, sem complicações.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Dark Professional -->
+    <footer class="bg-dark-black border-t border-gray-800 py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-gold-primary">SEU CURSO ONLINE</h3>
+                <p class="text-gray-400 mb-8 text-lg">Transformando vidas através do conhecimento</p>
+                <p class="text-gray-400">
+                    Contato: <a href="mailto:contato@seucurso.com" class="text-gold-primary hover:text-gold-dark transition-colors">contato@seucurso.com</a>
+                </p>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <div class="flex flex-wrap justify-center gap-8 mb-6">
+                    <a href="politica-privacidade.html" class="text-gray-400 hover:text-gold-primary transition-colors">Política de Privacidade</a>
+                    <a href="termos-uso.html" class="text-gray-400 hover:text-gold-primary transition-colors">Termos de Uso</a>
+                </div>
+                <p class="text-gray-500">
+                    © 2024 Seu Curso Online. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para tracking e checkout -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

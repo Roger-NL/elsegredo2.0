@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela sua compra! - eBook de Inglês</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-black': '#0a0a0a',
+                        'dark-gray-900': '#111111',
+                        'dark-gray-800': '#1a1a1a',
+                        'gold-primary': '#FFD700'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Track purchase success -->
+    <script>
+        // Google Analytics purchase event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'purchase_ebook_success', {
+                event_category: 'conversion',
+                event_label: 'thank_you_page',
+                value: 49.99
+            });
+        }
+    </script>
+</head>
+<body class="font-inter bg-dark-black text-white">
+    
+    <div class="container mx-auto px-6 py-16 max-w-4xl">
+        <div class="text-center mb-12">
+            <div class="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl">✅</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">
+                <span class="text-gold-primary">Parabéns!</span> Sua compra foi confirmada
+            </h1>
+            <p class="text-xl text-gray-400">Você agora tem acesso completo ao eBook + aula grátis</p>
+        </div>
+        
+        <!-- Acesso aos produtos -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            
+            <!-- eBook Download -->
+            <div class="bg-dark-gray-800 rounded-2xl p-8 border border-gray-700 text-center">
+                <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">📖</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">Seu eBook Está Pronto!</h3>
+                <p class="text-gray-300 mb-6">
+                    Faça o download imediato do seu eBook de Inglês Prático
+                </p>
+                <button onclick="downloadEbook()" class="btn-gold w-full py-3 rounded-lg font-bold">
+                    📥 BAIXAR EBOOK AGORA
+                </button>
+            </div>
+            
+            <!-- Aula Grátis -->
+            <div class="bg-dark-gray-800 rounded-2xl p-8 border border-gray-700 text-center">
+                <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">🎓</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">Sua Aula Grátis</h3>
+                <p class="text-gray-300 mb-6">
+                    Acesso liberado à aula exclusiva complementar
+                </p>
+                <button onclick="accessFreeClass()" class="btn-gold w-full py-3 rounded-lg font-bold">
+                    ▶️ ASSISTIR AULA GRÁTIS
+                </button>
+            </div>
+            
+        </div>
+        
+        <!-- Informações importantes -->
+        <div class="bg-dark-gray-800 rounded-2xl p-8 border border-gray-700 mb-8">
+            <h3 class="text-xl font-bold text-gold-primary mb-4">📧 Informações Importantes</h3>
+            <div class="space-y-3 text-gray-300">
+                <p><strong>✅ Email de confirmação:</strong> Enviado para o email cadastrado</p>
+                <p><strong>✅ Links de acesso:</strong> Também enviados por email como backup</p>
+                <p><strong>✅ Suporte:</strong> <a href="mailto:contato@seudominio.com" class="text-gold-primary hover:underline">contato@seudominio.com</a></p>
+                <p><strong>✅ Prazo:</strong> Acesso vitalício ao material</p>
+            </div>
+        </div>
+        
+        <!-- Próximos passos -->
+        <div class="bg-gradient-to-r from-gold-primary/10 to-gold-primary/5 rounded-2xl p-8 border border-gold-primary/20">
+            <h3 class="text-xl font-bold text-white mb-4">🚀 Próximos Passos Recomendados</h3>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                    <span class="text-3xl mb-2 block">1️⃣</span>
+                    <h4 class="font-bold text-white mb-2">Baixe o eBook</h4>
+                    <p class="text-gray-300 text-sm">Salve em um local de fácil acesso</p>
+                </div>
+                <div>
+                    <span class="text-3xl mb-2 block">2️⃣</span>
+                    <h4 class="font-bold text-white mb-2">Assista a aula</h4>
+                    <p class="text-gray-300 text-sm">Complementa perfeitamente o eBook</p>
+                </div>
+                <div>
+                    <span class="text-3xl mb-2 block">3️⃣</span>
+                    <h4 class="font-bold text-white mb-2">Pratique diariamente</h4>
+                    <p class="text-gray-300 text-sm">Use os exercícios do material</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <p class="text-gray-400 mb-4">Obrigado por confiar em nosso método!</p>
+            <a href="index.html" class="text-gold-primary hover:underline">← Voltar para página inicial</a>
+        </div>
+    </div>
+    
+    <script>
+        function downloadEbook() {
+            // Track download
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download_ebook', {
+                    event_category: 'engagement',
+                    event_label: 'thank_you_download'
+                });
+            }
+            
+            // Em produção, este seria o link real do arquivo
+            alert('Iniciando download do eBook...');
+            // window.location.href = 'https://drive.google.com/ebook-link';
+        }
+        
+        function accessFreeClass() {
+            // Track class access
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'access_free_class', {
+                    event_category: 'engagement',
+                    event_label: 'thank_you_class_access'
+                });
+            }
+            
+            // Em produção, abriria a aula em nova aba
+            alert('Redirecionando para sua aula grátis...');
+            // window.open('https://vimeo.com/your-class-link', '_blank');
+        }
+        
+        // Track page view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'view_thank_you', {
+                event_category: 'conversion',
+                event_label: 'purchase_completion'
+            });
+        }
+    </script>
+    
+</body>
+</html>
+

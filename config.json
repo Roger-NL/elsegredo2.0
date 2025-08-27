@@ -1,0 +1,17 @@
+{
+  "PRICES": {
+    "ebook_promo": 49.99,
+    "ebook_full": 99.90,
+    "class_only": 50.00
+  },
+  "PROMO": {
+    "enabled": true,
+    "label": "Por tempo limitado",
+    "deadline": "2025-09-30T23:59:59-03:00"
+  },
+  "PRODUCT": {
+    "name": "eBook de Inglês Prático",
+    "description": "Aprenda inglês na prática com um eBook direto ao ponto"
+  }
+}
+

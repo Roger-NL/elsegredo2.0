@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>eBook de Inglês + Aula Grátis | Oferta por Tempo Limitado</title>
+    <meta name="description" content="Aprenda inglês na prática com um ebook direto ao ponto. R$ 49,99 por tempo limitado e aula grátis após a compra.">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Apple Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="eBook Inglês">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Meta Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="eBook de Inglês + Aula Grátis | Oferta por Tempo Limitado">
+    <meta property="og:description" content="Aprenda inglês na prática com um ebook direto ao ponto. R$ 49,99 por tempo limitado e aula grátis após a compra.">
+    <meta property="og:url" content="https://seudominio.com">
+    
+    <!-- Google Analytics (substitua YOUR_GA_ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID');
+    </script>
+    
+    <!-- TailwindCSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-black': '#0a0a0a',
+                        'dark-gray-900': '#111111',
+                        'dark-gray-800': '#1a1a1a',
+                        'dark-gray-700': '#2a2a2a',
+                        'dark-gray-600': '#3a3a3a',
+                        'dark-gray-500': '#4a4a4a',
+                        'dark-gray-400': '#6a6a6a',
+                        'gold-primary': '#FFD700',
+                        'gold-dark': '#FFC107',
+                        'primary': '#FFD700',
+                        'secondary': '#1a1a1a',
+                        'accent': '#FFC107'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    container: {
+                        center: true,
+                        padding: '2rem',
+                        screens: {
+                            'sm': '640px',
+                            'md': '768px',
+                            'lg': '1024px',
+                            'xl': '1280px',
+                            '2xl': '1536px',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter">
+    
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gold-primary">
+                EBOOK INGLÊS
+            </div>
+            <button onclick="goToCheckout('header')" class="btn-gold px-6 py-2 rounded-lg font-semibold">
+                R$ 49,99
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen bg-dark-black pt-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center justify-items-center min-h-[80vh] max-w-6xl mx-auto">
+                
+                <!-- Content Left Side -->
+                <div class="space-y-10 animate-fadeInLeft">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                        Aprenda inglês na prática com um <span class="text-gold-primary">eBook</span> direto ao ponto
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 leading-relaxed mb-10">
+                        Oferta por tempo limitado: leve o eBook por <strong class="text-gold-primary">R$ 49,99</strong> e receba <strong class="text-gold-primary">uma aula grátis</strong> após a compra. Preço cheio: <span class="line-through text-gray-500">R$ 99,90</span>
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <button onclick="goToCheckout('ebook')" class="btn-gold-large px-8 py-4 rounded-lg font-bold text-lg animate-gold-glow">
+                            💰 COMPRAR POR R$ 49,99
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400 pt-4">
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                            Promoção por tempo limitado
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            Download imediato
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            + Aula grátis incluída
+                        </span>
+                    </div>
+                    
+                    <div class="text-center pt-4">
+                        <a href="#" onclick="openClassOnlyModal()" class="text-gray-400 hover:text-gold-primary text-sm underline transition-colors duration-300">
+                            Quero só a aula (R$ 50)
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Form Right Side -->
+                <div class="animate-fadeInRight">
+                    <div class="bg-dark-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span class="text-2xl text-gray-300">📖</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">eBook de Inglês Prático</h3>
+                            <p class="text-gray-400 text-sm">Método direto ao ponto</p>
+                        </div>
+                        
+                        <form class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <input type="email" placeholder="Seu melhor email" required 
+                                       class="w-full px-4 py-3 bg-dark-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-gold-primary focus:outline-none focus:ring-2 focus:ring-gold-primary/20">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Seu WhatsApp (opcional)" 
+                                       class="w-full px-4 py-3 bg-dark-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-gold-primary focus:outline-none focus:ring-2 focus:ring-gold-primary/20">
+                            </div>
+                            <button type="submit" class="btn-gold w-full py-3 rounded-lg font-bold">
+                                📩 RECEBER ACESSO GRATUITO
+                            </button>
+                        </form>
+                        
+                        <p class="text-xs text-gray-500 text-center mt-4">
+                            Seus dados estão protegidos e nunca serão compartilhados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-1/3 h-full opacity-5">
+            <div class="w-full h-full bg-gradient-to-l from-gold-primary to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- O que você recebe -->
+    <section id="benefits" class="py-20 bg-dark-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    O que você <span class="text-gold-primary">recebe</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Tudo incluído na sua compra por apenas R$ 49,99
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">📖</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">eBook Essencial</h3>
+                    <p class="text-gray-400">
+                        Frases-chave e vocabulário de uso real para aplicar no dia a dia
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">✏️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Exercícios Práticos</h3>
+                    <p class="text-gray-400">
+                        Exercícios rápidos para fixar o conteúdo sem enrolação
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🎓</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Aula Grátis</h3>
+                    <p class="text-gray-400">
+                        Acesso a 1 aula grátis liberada automaticamente após a compra
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como funciona Section -->
+    <section id="how-it-works" class="py-20 bg-dark-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Como <span class="text-gold-primary">funciona</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Processo simples em 3 passos para dominar o inglês essencial
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-black">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Você compra o eBook</h3>
+                    <p class="text-gray-400">
+                        Por <strong class="text-gold-primary">R$ 49,99</strong> (promoção por tempo limitado)
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-black">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Recebe tudo automaticamente</h3>
+                    <p class="text-gray-400">
+                        Download do eBook + acesso à <strong class="text-gold-primary">aula grátis</strong> na hora
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-black">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Aprende inglês na prática</h3>
+                    <p class="text-gray-400">
+                        Aplica o conteúdo direto ao ponto e vê resultados rápidos
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-400 mb-6">
+                    <strong>Alternativa:</strong> Se preferir <strong>apenas a aula</strong>, também está disponível por <strong class="text-gold-primary">R$ 50</strong>
+                </p>
+                <a href="#" onclick="openClassOnlyModal()" class="text-gold-primary hover:text-gold-dark underline text-lg transition-colors duration-300">
+                    Quero só a aula (R$ 50)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia/Confiança Section -->
+    <section id="guarantee" class="py-20 bg-dark-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Garantia e <span class="text-gold-primary">Confiança</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Sua compra é 100% segura e protegida
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🔒</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Pagamento Seguro</h3>
+                    <p class="text-gray-400">
+                        Processamento protegido com criptografia SSL
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">📧</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Suporte por Email</h3>
+                    <p class="text-gray-400">
+                        Tire suas dúvidas a qualquer momento
+                    </p>
+                </div>
+                
+                <div class="card text-center p-8 hover:border-gold-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-gold-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">✅</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Reembolso</h3>
+                    <p class="text-gray-400">
+                        Conforme política de reembolso
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="py-20 bg-dark-black">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+                    Aproveite esta <span class="text-gold-primary">oferta especial</span>
+                </h2>
+                
+                <div class="bg-dark-gray-800 rounded-3xl p-8 mb-8 border border-gray-700">
+                    <div class="text-center">
+                        <div class="text-6xl font-bold text-gold-primary mb-4">R$ 49,99</div>
+                        <div class="text-gray-400 mb-4">
+                            <span class="line-through text-xl">R$ 99,90</span>
+                            <span class="text-white ml-2">- 50% OFF</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            ✅ eBook Completo<br>
+                            ✅ Exercícios Práticos<br>
+                            ✅ Aula Grátis Incluída
+                        </p>
+                        
+                        <button onclick="goToCheckout('final')" class="btn-gold-large px-12 py-5 rounded-2xl font-bold text-xl animate-gold-glow">
+                            💰 COMPRAR AGORA POR R$ 49,99
+                        </button>
+                        
+                        <p class="text-sm text-gray-500 mt-4">
+                            Depois volta para <strong>R$ 99,90</strong>
+                        </p>
+                        
+                        <div class="mt-6">
+                            <a href="#" onclick="openClassOnlyModal()" class="text-gold-primary hover:text-gold-dark underline">
+                                Quero só a aula (R$ 50)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-gold-primary font-bold text-xl mb-4">EBOOK INGLÊS</div>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="termos.html" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">Termos de Uso</a>
+                    <a href="privacidade.html" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">Política de Privacidade</a>
+                    <a href="mailto:contato@seudominio.com" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">Contato</a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2024 eBook de Inglês. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para "Só a aula" -->
+    <div id="classOnlyModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-dark-gray-800 rounded-2xl p-8 max-w-md w-full border border-gray-700">
+            <h3 class="text-xl font-bold text-white mb-4">Apenas a Aula</h3>
+            <p class="text-gray-300 mb-6">
+                Acesso à aula exclusiva por <span class="text-gold-primary font-bold">R$ 50</span>
+            </p>
+            <div class="flex gap-4">
+                <button onclick="goToCheckout('class_only')" class="btn-gold flex-1 py-3 rounded-lg font-bold">
+                    COMPRAR R$ 50
+                </button>
+                <button onclick="closeClassOnlyModal()" class="bg-gray-600 hover:bg-gray-500 text-white flex-1 py-3 rounded-lg font-bold transition-colors duration-300">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Configuração dos preços (usar config.json em produção)
+        const PRICES = {
+            ebook_promo: 49.99,
+            ebook_full: 99.90,
+            class_only: 50.00
+        };
+        
+        // Modal Functions
+        function openClassOnlyModal() {
+            document.getElementById('classOnlyModal').classList.remove('hidden');
+            
+            // Track evento
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click_class_only', {
+                    event_category: 'engagement',
+                    event_label: 'class_only_modal_open'
+                });
+            }
+        }
+        
+        function closeClassOnlyModal() {
+            document.getElementById('classOnlyModal').classList.add('hidden');
+        }
+        
+        // Form Submit
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            const phone = event.target.querySelector('input[type="tel"]').value;
+            
+            // Track lead
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', {
+                    event_category: 'conversion',
+                    event_label: 'email_capture'
+                });
+            }
+            
+            // Aqui você integraria com seu sistema de email marketing
+            alert('Obrigado! Em breve você receberá mais informações.');
+        }
+        
+        // Fechar modal clicando fora
+        document.getElementById('classOnlyModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeClassOnlyModal();
+            }
+        });
+    </script>
+</body>
+</html>
+

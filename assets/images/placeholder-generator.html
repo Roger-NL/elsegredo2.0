@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Placeholders - O Código Secreto do Inglês</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f3f4f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .placeholder {
+            margin: 20px 0;
+            text-align: center;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        .ebook-mockup {
+            width: 400px;
+            height: 600px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            margin: 0 auto;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+            transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+        }
+        .ebook-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            padding: 0 40px;
+            line-height: 1.2;
+        }
+        .ebook-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            padding: 0 40px;
+        }
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .avatar-1 { background: linear-gradient(135deg, #ec4899, #be185d); }
+        .avatar-2 { background: linear-gradient(135deg, #3b82f6, #1e40af); }
+        .avatar-3 { background: linear-gradient(135deg, #10b981, #047857); }
+        .guide-icon {
+            width: 200px;
+            height: 300px;
+            background: linear-gradient(135deg, #facc15, #eab308);
+            margin: 0 auto;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
+        }
+        .download-btn {
+            background: #22c55e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+        .download-btn:hover {
+            background: #16a34a;
+        }
+        h2 {
+            color: #374151;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Placeholders para O Código Secreto do Inglês</h1>
+        <p>Use as imagens abaixo temporariamente até criar as versões finais personalizadas.</p>
+        
+        <div class="placeholder">
+            <h2>E-book Mockup Principal</h2>
+            <div class="ebook-mockup">
+                <div class="ebook-title">O CÓDIGO SECRETO DO INGLÊS</div>
+                <div class="ebook-subtitle">O método revolucionário para fluência natural</div>
+            </div>
+            <button class="download-btn" onclick="downloadEbookMockup()">Gerar e Baixar</button>
+        </div>
+
+        <div class="placeholder">
+            <h2>Guia Prático</h2>
+            <div class="guide-icon">
+                <div style="font-size: 48px; margin-bottom: 20px;">📚</div>
+                <div style="font-size: 20px;">GUIA</div>
+                <div style="font-size: 20px;">PRÁTICO</div>
+            </div>
+            <button class="download-btn" onclick="downloadGuide()">Gerar e Baixar</button>
+        </div>
+
+        <div class="placeholder">
+            <h2>Avatars dos Depoimentos</h2>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div>
+                    <div class="avatar avatar-1">M</div>
+                    <p>Maria Silva</p>
+                    <button class="download-btn" onclick="downloadAvatar('maria')">Baixar</button>
+                </div>
+                <div>
+                    <div class="avatar avatar-2">C</div>
+                    <p>Carlos Santos</p>
+                    <button class="download-btn" onclick="downloadAvatar('carlos')">Baixar</button>
+                </div>
+                <div>
+                    <div class="avatar avatar-3">A</div>
+                    <p>Ana Costa</p>
+                    <button class="download-btn" onclick="downloadAvatar('ana')">Baixar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createCanvas(width, height) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            return canvas;
+        }
+
+        function downloadEbookMockup() {
+            const canvas = createCanvas(400, 600);
+            const ctx = canvas.getContext('2d');
+            
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 600);
+            gradient.addColorStop(0, '#2563eb');
+            gradient.addColorStop(1, '#1d4ed8');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 600);
+            
+            // Title
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 28px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('O CÓDIGO', 200, 200);
+            ctx.fillText('SECRETO', 200, 240);
+            ctx.fillText('DO INGLÊS', 200, 280);
+            
+            // Subtitle
+            ctx.font = '14px Inter, sans-serif';
+            ctx.fillStyle = 'rgba(255,255,255,0.9)';
+            ctx.fillText('O método revolucionário', 200, 350);
+            ctx.fillText('para fluência natural', 200, 375);
+            
+            downloadCanvas(canvas, 'ebook-mockup.png');
+        }
+
+        function downloadGuide() {
+            const canvas = createCanvas(200, 300);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            const gradient = ctx.createLinearGradient(0, 0, 200, 300);
+            gradient.addColorStop(0, '#facc15');
+            gradient.addColorStop(1, '#eab308');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 200, 300);
+            
+            // Icon
+            ctx.font = '48px serif';
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.fillText('📚', 100, 120);
+            
+            // Text
+            ctx.font = 'bold 20px Inter, sans-serif';
+            ctx.fillText('GUIA', 100, 180);
+            ctx.fillText('PRÁTICO', 100, 210);
+            
+            downloadCanvas(canvas, 'guia-pratico.png');
+        }
+
+        function downloadAvatar(name) {
+            const canvas = createCanvas(96, 96);
+            const ctx = canvas.getContext('2d');
+            
+            const colors = {
+                maria: ['#ec4899', '#be185d'],
+                carlos: ['#3b82f6', '#1e40af'],
+                ana: ['#10b981', '#047857']
+            };
+            
+            const letters = {
+                maria: 'M',
+                carlos: 'C',
+                ana: 'A'
+            };
+            
+            // Circle background
+            const gradient = ctx.createLinearGradient(0, 0, 96, 96);
+            gradient.addColorStop(0, colors[name][0]);
+            gradient.addColorStop(1, colors[name][1]);
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(48, 48, 48, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Letter
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 36px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(letters[name], 48, 48);
+            
+            downloadCanvas(canvas, `avatar-${name}.png`);
+        }
+
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
+
+
