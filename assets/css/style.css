@@ -791,8 +791,19 @@ p {
     background: var(--background-primary);
     position: relative;
     overflow: hidden;
-    padding: var(--space-20) 0;
     margin-top: -50px; /* Compensar o padding-top do body */
+    text-align: center;
+}
+
+#hero .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+#hero .max-w-5xl {
+    margin: 0 auto;
+    padding: 0 var(--space-6);
 }
 
 #hero .container {
